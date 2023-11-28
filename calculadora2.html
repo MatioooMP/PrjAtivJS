@@ -11,37 +11,40 @@
 <body>
     <main>
         <h1>Calculadora v2.0</h1>
-        <form action="calculadora2.html" method="GET" nome="formCalculadora">
+        <form action="calculadora2.html" method="GET" name="formCalculadora" onsubmit="Calcular();">
             <div>
-                <label for = "">Primeiro número:</label>
-                <input type="text" name="num1" id="numero1"
-                placeholder="Digite o primeiro número">
+                <label for="numero1">Primeiro número:</label>
+                <input type="text" name="num1" id="numero1" placeholder="Digite o primeiro número">
             </div>
-            
+
             <div>
-                <label for = "">Segundo número:</label>
-                <input type="text" name="num2" id="numero2"
-                placeholder="Digite o segundo número">
+                <label for="numero2">Segundo número:</label>
+                <input type="text" name="num2" id="numero2" placeholder="Digite o segundo número">
             </div>
             <div>
-                <input type="radio" name="oper" id="operacaoAdicao" >
+                <input type="radio" name="oper" id="operacaoAdicao" value="+">
                 <label for="operacaoAdicao">Adição</label>
-                <input type="radio" name="oper" id="operacaoSubtracao">
+                <input type="radio" name="oper" id="operacaoSubtracao" value="-">
                 <label for="operacaoSubtracao">Subtração</label>
-                <input type="radio" name="oper" id="operacaoMultiplicacao">
+                <input type="radio" name="oper" id="operacaoMultiplicacao" value="x">
                 <label for="operacaoMultiplicacao">Multiplicação</label>
-                <input type="radio" name="oper" id="operacaoDivisao">
+                <input type="radio" name="oper" id="operacaoDivisao" value="/">
                 <label for="operacaoDivisao">Divisão</label>
             </div>
             <div>
-                <button>Calcular</button>
-                <button>Limpar Campos</button>
+                <input type="submit" value="Calcular">
+                <input type="reset" value="Limpar Campos">
             </div>
-
-
         </form>
+
+        <div>
+            <input type="text" name="result" id="resultado">
+        </div>
+
+        <p></p>
     </main>
-    <script src = "./js/calculadora2.js"></script>
+    <script src="./js/calculadora2.js"></script>
+
 </body>
 
 </html>
